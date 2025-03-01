@@ -35,6 +35,26 @@ body {
     z-index: 1000;
 }
 
+.project-modal button {
+    color: #000 !important;
+    background: #fff !important;
+    border: 2px solid #000 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-table {
+    margin-top: 120px; /* Aumenta spazio per header */
+}
+
+.projects-table th {
+    font-weight: 400; /* Peso font più leggero */
+    text-transform: uppercase; /* Allineato allo stile */
+}
+
 /* Sezione Home hero */
 #home {
     text-align: left;
@@ -99,11 +119,11 @@ body {
     gap: 1.5rem;
     z-index: 9999; /* Assicura che siano sopra altri elementi */
     padding: 0.8rem;
+    mix-blend-mode: normal; /* Rimuovi l'effetto difference */
 }
 
 .social-links a {
-    color: #000;
-    mix-blend-mode: normal !important;
+    color: #000 !important; /* Forza colore nero */
 }
 
 .social-links a:hover {
@@ -111,19 +131,6 @@ body {
         scale(1.15)
         translateX(-4px); /* Leggero movimento orizzontale */
     opacity: 1;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .social-links {
-        bottom: 3vh;
-        right: 4vw;
-        gap: 1.2rem;
-    }
-    
-    .social-links a {
-        font-size: clamp(1.3rem, 5vw, 1.7rem);
-    }
 }
 
 /* Responsive Design */
@@ -134,8 +141,15 @@ body {
     }
 
     .header div {
-        font-size: 1rem;
+        font-weight: 700;
+        font-size: 0.9rem;
         padding: 0 1rem;
+    }
+
+    .projects-table td, 
+    .projects-table th {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 
     .section {
@@ -145,6 +159,16 @@ body {
     nav ul {
         justify-content: center;
         gap: 1.5rem;
+    }
+
+    .social-links {
+        bottom: 3vh;
+        right: 4vw;
+        gap: 1.2rem;
+    }
+    
+    .social-links a {
+        font-size: clamp(1.3rem, 5vw, 1.7rem);
     }
 }
 
