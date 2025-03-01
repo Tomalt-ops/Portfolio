@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivio Progetti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+
+        body {
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            padding: 2rem 0;
+            position: fixed;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .header div {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Allineamento specifico per le colonne */
+        .header .name {
+            text-align: left;
+            justify-content: flex-start;
+            padding-left: 2rem;
+        }
+
+        .header .about {
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .header .title {
+            text-align: right;
+            justify-content: flex-end;
+            padding-right: 2rem;
+        }
+
+        /* Tabella progetti */
+
+        .projects-table {
+            table-layout: fixed; /* Forza le colonne ad avere larghezza uguale */
+        }
+
+        .projects-table th,
+        .projects-table td {
+            width: 33.33%; /* Divide lo spazio in 3 parti uguali */
+        }
+        
+        .projects-table th:nth-child(1),
+        .projects-table td:nth-child(1) {
+            text-align: left;
+            padding-left: 2rem;
+        }
+        
+        .projects-table th:nth-child(2),
+        .projects-table td:nth-child(2) {
+            text-align: center;
+        }
+        .projects-table th:nth-child(3),
+        .projects-table td:nth-child(3) {
+            text-align: right;
+            padding-right: 2rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Fjalla One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .projects-table {
+            margin-top: 8rem;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .projects-table th, 
+        .projects-table td {
+            padding: 1.5rem 2rem;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .project-row:hover {
+            background: #f8f8f8;
+        }
+
+        /* Hover image */
+        .hover-image {
+            display: none;
+            position: absolute;
+            left: 90%;
+            top: 0;
+            width: 300px;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .project-row:hover .hover-image {
+            display: block;
+        }
+
+        /* Modal dettagli */
+        .project-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            max-height: 80vh;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            z-index: 2000;
+        }
+
+        /* About Section */
+        #about-content {
+            display: none;
+            padding: 6rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: justify;
+            hyphens: auto; /* Divisione automatica delle parole */
+            max-width: 800px; /* Larghezza ottimale per la leggibilità */
+            line-height: 1.5; /* Interlinea */
+        }
+
+        #about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: #000;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+        
+        .project-modal button {
+            color: #000000 !important;
+            background: none !important;
+            border: 0px !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            font-size: 1.2rem !important;
+            line-height: 1;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            transition: all 0.3s;
+        }
+        
+        .project-modal button:hover {
+            background: #000000 !important;
+            color: #ffffff !important;
+        }
+        
+        /* scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+            border-radius: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="name">MARIO ROSSI</div>
+        <div class="about" onclick="toggleAbout()">About</div>
+        <div class="title">GRAPHIC DESIGNER</div>
+    </div>
+
+    <!-- Tabella progetti -->
+    <table class="projects-table">
+        <thead>
+            <tr>
+                <th>Progetto</th>
+                <th>Tipologia</th>
+                <th>&nbsp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="project-row" onclick="openModal('torre-panoramica')">
+                <td>Torre Panoramica
+                    <img src="nino-yang-DOIgz9_qmFI-unsplash.jpg" class="hover-image" alt="Anteprima progetto">
+                </td>
+                <td>Architettura</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr class="project-row" onclick="openModal('parco-urbano')">
+                <td>Parco Urbano
+                    <img src="IMG_20180712_155215.jpg" class="hover-image" alt="Anteprima progetto">
+                </td>
+                <td>Urbanistica</td>
+                <td>&nbsp</td>
+            </tr>
+            <tr class="project-row" onclick="openModal('barca-volante')">
+                <td>Barca Volante
+                    <img src="IMG_20180712_155215.jpg" class="hover-image" alt="Anteprima progetto">
+                </td>
+                <td>Nautilus</td>
+                <td>&nbsp</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Modal Dettagli -->
+    <div id="project-modal" class="project-modal">
+        <button onclick="closeModal()" style="float: right; margin-bottom: 1rem;">✕</button>
+        <div id="modal-content"></div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-content">
+        <h2>About</h2>
+        <p>Mario Rossi, graphic designer di fama internazionale, non ha dubbi: lui è il migliore al mondo. Con un portfolio che spazia da campagne pubblicitarie iconiche a loghi diventati simboli culturali, Mario si vanta di trasformare idee in capolavori visivi. "Non c'è sfida creativa che non possa affrontare," dice con un sorriso sicuro. "Ogni mio progetto è un passo avanti nel futuro del design, e il mondo lo sa." Con un ego grande quanto il suo talento, Mario Rossi non si accontenta di essere bravo: vuole essere ricordato come il designer che ha cambiato il gioco, per sempre.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/carlo.marangoni?igsh=MXY5b2tzODdvZWYzOA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/carlo.marangoni?igsh=MXY5b2tzODdvZWYzOA==" target="_blank"><i class="fab fa-behance"></i></a>
+            <a href="https://www.instagram.com/carlo.marangoni?igsh=MXY5b2tzODdvZWYzOA==" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Funzionalità About
+        function toggleAbout() {
+            const about = document.getElementById('about-content');
+            about.style.display = about.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Funzionalità Modal
+        const projectData = {
+            'torre-panoramica': {
+                title: 'Torre Panoramica',
+                content: `
+                    <h2>Torre Panoramica</h2>
+                    <p>Mi piacciono tanto sia i cani neri che i cani di tutti i colori</p>
+                    <img src="nino-yang-DOIgz9_qmFI-unsplash.jpg" style="width: 100%; margin: 1rem 0;"> <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
+                    <img src="nino-yang-DOIgz9_qmFI-unsplash.jpg" style="width: 100%; margin: 1rem 0;">
+                `
+            },
+            'parco-urbano': {
+                title: 'Parco Urbano',
+                content: `
+                    <h2>Parco Urbano</h2>
+                    <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
+                    <p>i parchi mi piacciono, forse preferisco quelli acquatici</p>
+                `
+            },
+             'barca-volante': {
+                title: 'Barca Volante',
+                content: `
+                    <h2>Barca Volante</h2>
+                    <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
+                    <p>ho il mal di mare</p>
+                    <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
+                `
+            }
+        };
+
+        function openModal(projectId) {
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = projectData[projectId].content;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').style.display = 'none';
+        }
+
+        // Chiudi modal cliccando fuori
+        window.onclick = function(event) {
+            const modal = document.getElementById('project-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
