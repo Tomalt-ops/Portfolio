@@ -1,7 +1,7 @@
 /* Reset avanzato e font */
 @font-face {
-    font-family: 'NomeFontPersonalizzato';
-    src: url('https://github.com/Tomalt-ops/Portfolio/blob/main/HelveticaNeue.ttc') format('truetype');
+    font-family: 'NeueHaasDisplayLight';
+    src: url('https://github.com/Tomalt-ops/Portfolio/blob/main/neue-haas-grotesk-display-pro-cdnfonts/NeueHaasDisplayLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'HelveticaNeue', sans-serif;
+    font-family: 'NeueHaasDisplayLight', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
