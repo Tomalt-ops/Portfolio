@@ -45,14 +45,6 @@ body {
     opacity: 0.7;
 }
 
-.header .social-links a,
-.header .social-links a:visited,
-.header .social-links a:hover,
-.header .social-links a:active {
-    color: #000 !important;
-    text-decoration: none;
-}
-
 .header .social-links {
     display: flex;
     justify-content: flex-end;
@@ -65,14 +57,28 @@ body {
 .header .social-links a {
     font-size: 1.4rem;
     position: relative;
+    color: #000 !important;
+    text-decoration: none;
 }
 
-.header .social-links a:not(:last-child) {
-    margin-right: 0.1rem;
+.header .social-links a:visited,{
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.header .social-links a:active {
+    color: #000 !important;
+    text-decoration: none;
 }
 
 .header .social-links a:hover {
     transform: translateY(-6px);
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.header .social-links a:not(:last-child) {
+    margin-right: 0.1rem;
 }
 
 .project-modal button {
