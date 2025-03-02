@@ -195,7 +195,7 @@ body {
 /* hover image */
 .hover-image {
     display: none;
-    position: fixed; /* Cambia da absolute a fixed */
+    position: fixed;
     width: auto;
     max-width: 40vw;
     max-height: 80vh;
