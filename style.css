@@ -47,9 +47,9 @@ body {
 .header .social-links {
     display: flex;
     justify-content: flex-end;
-    gap: 20rem; /* Spaziatura */
+    gap: 2rem; /* Spaziatura */
     width: 100%;
-    padding-right: 0;
+    padding-right: 2rem;
     width: 100%;
 }
 
@@ -74,13 +74,6 @@ body {
     transform: translateY(-6px);
     color: #000000 !important;
     text-decoration: none;
-}
-
-.header .social-links a:first-child {
-    margin-right: 20rem; /* Spazio personalizzato dopo Instagram */
-}
-.header .social-links a:last-child {
-    margin-left: 20rem; /* Spazio personalizzato prima del bordo */
 }
 
 .project-modal button {
@@ -159,6 +152,65 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
+/* About*/
+#about-modal {
+    display: none; /* Nascosto di default */
+}
+
+#about-modal .modal-content {
+    max-width: 600px;
+    padding: 40px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+#about-modal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#about-content {
+    text-justify: inter-word; /* Migliora la distribuzione degli spazi */
+    word-spacing: -0.1em; /* Compatta leggermente gli spazi tra le parole */
+}
+
+/* project table*/
+.projects-table th:nth-child(2),
+.projects-table td:nth-child(2) {
+    padding-left: 2rem; /* Spaziatura uniforme */
+}
+
+/* hover image */
+.hover-image {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Animazione modale */
+.project-modal {
+    animation: modalFade 0.3s ease;
+    z-index: 2001; /* Sopra l'header */
+}
+
+@keyframes modalFade {
+    from { opacity: 0; transform: translate(-50%, -55%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
 /* Responsive Mobile Design */
 @media (max-width: 768px) {
     #home h1 {
@@ -194,7 +246,7 @@ body {
 
     .header .social-links {
         grid-area: social;
-        gap: 2rem;
+        gap: 1.5rem;
         padding-right: 1rem;
     }
     
@@ -220,50 +272,13 @@ body {
         justify-content: center;
         gap: 1.5rem;
     }
+
+    #about-modal .modal-content {
+        padding: 20px;
+    }
+    
+    #about-modal h2 {
+        font-size: 1.8rem;
+    }
 }
 
-.projects-table th:nth-child(2),
-.projects-table td:nth-child(2) {
-    padding-left: 2rem; /* Spaziatura uniforme */
-}
-
-.hover-image {
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-#about-modal {
-    display: none; /* Nascosto di default */
-}
-
-#about-modal .modal-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-#about-modal h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 5px;
-}
-
-#about-content {
-    text-justify: inter-word; /* Migliora la distribuzione degli spazi */
-    word-spacing: -0.1em; /* Compatta leggermente gli spazi tra le parole */
-}
