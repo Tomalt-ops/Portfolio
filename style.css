@@ -197,16 +197,17 @@ body {
     display: none;
     position: fixed;
     width: auto;
-    max-width: 40vw;
-    max-height: 80vh;
-    z-index: 1000;
+    max-width: 30vw;
+    min-width: 300px;
+    max-height: 60vh;
+    z-index: 1001;
     pointer-events: none;
+    box-sizing: content-box;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transform: translateY(-50%);
     object-fit: contain;
     background: white;
-    padding: 15px;
-    transition: opacity 0.3s ease;
+    padding: 5px;
+    transition: opacity 0.2s ease;
 }
 
 .project-row:hover .hover-image {
@@ -299,6 +300,10 @@ body {
 
     .hover-image {
         display: none !important; /* Disabilita l'hover su mobile */
+    }
+
+    .project-row:hover .hover-image {
+        display: none !important; /* Doppia protezione */
     }
 }
 
