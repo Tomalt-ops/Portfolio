@@ -195,24 +195,35 @@ body {
 /* hover image */
 .hover-image {
     display: none;
-    position: fixed;
-    width: auto;
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
     max-width: 30vw;
-    min-width: 300px;
-    max-height: 60vh;
-    z-index: 1001;
+    max-height: 50vh;
+    z-index: 1000;
     pointer-events: none;
-    box-sizing: content-box;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     object-fit: contain;
     background: white;
-    padding: 5px;
-    transition: opacity 0.2s ease;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
 }
 
+/* Prevent overflow */
+.hover-image {
+    max-left: 95vw;
+    max-right: 5vw;
+}
 .project-row:hover .hover-image {
     display: block;
-    opacity: 1;
+    opacity: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50%) translateX(20px); }
+    to { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
 
 /* Animazione modale */
