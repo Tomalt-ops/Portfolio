@@ -77,10 +77,6 @@ body {
     text-decoration: none;
 }
 
-.header .social-links a:not(:last-child) {
-    margin-right: 0.1rem;
-}
-
 .project-modal button {
     width: 30px !important;
     height: 30px !important;
