@@ -35,6 +35,25 @@ body {
     z-index: 1000;
 }
 
+.header .social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.header .social-links a {
+    font-size: 1.2rem;
+    color: #000;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+
+.header .social-links a:hover {
+    opacity: 0.7;
+    transform: none;
+}
+
 .project-modal button {
     color: #000 !important;
     background: #fff !important;
@@ -110,12 +129,12 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Social Links sottili */
+/* Social Links */
 .social-links {
     position: fixed;
     bottom: 2vh;  /* Unità viewport per adattamento responsive */
     right: 2vw;
-    display: flex;
+    display: none;
     gap: 1.5rem;
     z-index: 9999; /* Assicura che siano sopra altri elementi */
     padding: 0.8rem;
@@ -140,10 +159,19 @@ body {
         line-height: 1.2;
     }
 
-    .header div {
+     div {
         font-weight: 700;
         font-size: 0.9rem;
         padding: 0 1rem;
+    }
+
+    .header .social-links {
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .header .social-links a {
+        font-size: 1rem;
     }
 
     .projects-table td, 
