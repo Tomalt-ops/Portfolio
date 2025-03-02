@@ -403,12 +403,13 @@
             }
         }
 
-        // Aggiungi questo script per il posizionamento dinamico
+        // script per il posizionamento dinamico
         document.querySelectorAll('.project-row').forEach(row => {
             row.addEventListener('mouseover', function(e) {
                 const img = this.querySelector('.hover-image');
                 if(!img) return;
-                
+
+                img.style.display = 'block'; // Forza il display prima del calcolo
                 const rect = this.getBoundingClientRect();
                 const viewportWidth = window.innerWidth;
                 
@@ -424,6 +425,14 @@
                 // Centra verticalmente
                 img.style.top = rect.top + (rect.height/2) + 'px';
             });
+
+            row.addEventListener('mouseleave', function() {
+                const img = this.querySelector('.hover-image');
+                if(img) {
+                    img.style.left = '';
+                    img.style.right = '';
+                    img.style.top = '';
+                });
         });
     </script>
 
