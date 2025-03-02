@@ -203,7 +203,7 @@ body {
 /* Animazione modale */
 .project-modal {
     animation: modalFade 0.3s ease;
-    z-index: 2001; /* Sopra l'header */
+    z-index: 1001; /* Sopra l'header */
 }
 
 @keyframes modalFade {
@@ -230,6 +230,7 @@ body {
             "name social"
             "about about";
         padding: 1rem;
+        z-index: 1000;
     }
 
     .header .name {
@@ -275,6 +276,7 @@ body {
 
     #about-modal .modal-content {
         padding: 20px;
+        font-size: 1rem;
     }
     
     #about-modal h2 {
