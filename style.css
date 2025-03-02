@@ -46,10 +46,10 @@ body {
 
 .header .social-links {
     display: flex;
-    gap: 2rem; /* Aumenta lo spazio tra le icone */
+    gap: 10rem; /* Aumenta lo spazio tra le icone */
     justify-content: flex-end;
     width: 100%;
-    padding-right: 2rem;
+    padding-right: 0rem;
 }
 
 .header .social-links a {
