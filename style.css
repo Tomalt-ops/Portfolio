@@ -78,10 +78,10 @@ body {
 }
 
 .header .social-links a:first-child {
-    margin-right: 4rem; /* Spazio personalizzato dopo Instagram */
+    margin-right: 20rem; /* Spazio personalizzato dopo Instagram */
 }
 .header .social-links a:last-child {
-    margin-left: 1rem; /* Spazio personalizzato prima del bordo */
+    margin-left: 20rem; /* Spazio personalizzato prima del bordo */
 }
 
 .project-modal button {
