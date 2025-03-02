@@ -194,36 +194,10 @@ body {
 
 /* hover image */
 .hover-image {
-    display: none;
-    position: absolute;
-    left: 90%;
+    left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    width: 300px;
-    max-width: 30vw;
-    max-height: 50vh;
-    z-index: 1000;
-    pointer-events: none;
-    object-fit: contain;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 1px solid #eee;
-}
-
-/* Prevent overflow */
-.hover-image {
-    max-left: 95vw;
-    max-right: 5vw;
-}
-.project-row:hover .hover-image {
-    display: block;
-    opacity: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(-50%) translateX(20px); }
-    to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Animazione modale */
@@ -308,13 +282,4 @@ body {
     #about-modal h2 {
         font-size: 1.8rem;
     }
-
-    .hover-image {
-        display: none !important; /* Disabilita l'hover su mobile */
-    }
-
-    .project-row:hover .hover-image {
-        display: none !important; /* Doppia protezione */
-    }
 }
-
