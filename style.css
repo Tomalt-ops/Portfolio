@@ -58,10 +58,10 @@ body {
 }
 
 .header .social-links a:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 10rem;
 
 .header .social-links a:hover {
-    transform: translateY(-2px);
+    transform: translateY(-6px);
 }
 
 .project-modal button {
