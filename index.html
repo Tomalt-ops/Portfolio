@@ -405,34 +405,36 @@
 
         // script per il posizionamento dinamico
         document.querySelectorAll('.project-row').forEach(row => {
-            row.addEventListener('mouseover', function(e) {
+            let imgTimeout;
+            
+            row.addEventListener('mouseenter', function() {
                 const img = this.querySelector('.hover-image');
                 if(!img) return;
-
-                img.style.display = 'block'; // Forza il display prima del calcolo
+                
+                img.style.display = 'block';
                 const rect = this.getBoundingClientRect();
+                const imgWidth = img.offsetWidth;
                 const viewportWidth = window.innerWidth;
                 
-                // Posiziona a destra se c'è spazio, altrimenti a sinistra
-                if(viewportWidth - rect.right > img.offsetWidth + 50) {
-                    img.style.left = rect.right + 20 + 'px';
+                // Calcolo posizione orizzontale
+                if(viewportWidth - rect.right > imgWidth + 50) {
+                    img.style.left = `${rect.right + 15}px`;
                     img.style.right = 'auto';
                 } else {
-                    img.style.right = viewportWidth - rect.left + 20 + 'px';
                     img.style.left = 'auto';
+                    img.style.right = `${viewportWidth - rect.left + 15}px`;
                 }
                 
-                // Centra verticalmente
-                img.style.top = rect.top + (rect.height/2) + 'px';
+                // Centratura verticale precisa
+                const imgHeight = img.offsetHeight;
+                const verticalPosition = rect.top + (rect.height/2) - (imgHeight/2);
+                img.style.top = `${Math.max(15, verticalPosition)}px`;
             });
-
+            
             row.addEventListener('mouseleave', function() {
                 const img = this.querySelector('.hover-image');
-                if(img) {
-                    img.style.left = '';
-                    img.style.right = '';
-                    img.style.top = '';
-                });
+                if(img) img.style.display = 'none';
+            });
         });
     </script>
 
