@@ -54,6 +54,10 @@ body {
     width: 100%;
 }
 
+.header .social-links a:first-child {
+    margin-right: 12rem; /* Aggiusta il valore a seconda dello spazio desiderato */
+}
+
 .header .social-links a {
     font-size: 1.4rem;
     position: relative;
