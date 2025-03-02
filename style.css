@@ -23,7 +23,8 @@ body {
 }
 
 .header {
-    grid-template-columns: 1fr auto 1fr; /* Layout più flessibile */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Layout a 3 colonne */
     align-items: center;
     padding: 1.5rem 2rem;
 }
@@ -46,10 +47,10 @@ body {
 
 .header .social-links {
     display: flex;
-    gap: 10rem; /* Aumenta lo spazio tra le icone */
     justify-content: flex-end;
+    gap: 2.5rem; /* Spaziatura aumentata */
     width: 100%;
-    padding-right: 0rem;
+    padding-right: 2rem;
 }
 
 .header .social-links a {
@@ -174,7 +175,7 @@ body {
     }
 
     .header .social-links {
-        gap: 1.5rem;
+        gap: 2rem;
         padding-right: 1rem;
     }
     
