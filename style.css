@@ -234,6 +234,35 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+#about-modal {
+    display: none; /* Nascosto di default */
+}
+
+#about-modal .modal-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#about-modal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
 #about-content {
     text-justify: inter-word; /* Migliora la distribuzione degli spazi */
     word-spacing: -0.1em; /* Compatta leggermente gli spazi tra le parole */
