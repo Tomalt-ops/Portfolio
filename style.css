@@ -48,14 +48,10 @@ body {
 .header .social-links {
     display: flex;
     justify-content: flex-end;
-    /* gap: 3rem; Spaziatura */
+    gap: 3rem; /* Spaziatura */
     width: 100%;
     padding-right: 0;
     width: 100%;
-}
-
-.header .social-links a:"fab fa-instagram" {
-    margin-right: 5rem; /* Aggiusta il valore a seconda dello spazio desiderato */
 }
 
 .header .social-links a {
@@ -79,6 +75,13 @@ body {
     transform: translateY(-6px);
     color: #000 !important;
     text-decoration: none;
+}
+
+.header .social-links a:first-child {
+    margin-right: 4rem; /* Spazio personalizzato dopo Instagram */
+}
+.header .social-links a:last-child {
+    margin-left: 1rem; /* Spazio personalizzato prima del bordo */
 }
 
 .project-modal button {
@@ -192,8 +195,8 @@ body {
 
     .header .social-links {
         grid-area: social;
-        /* gap: 2rem; */
-        padding-right: 0.5rem;
+        gap: 2rem;
+        padding-right: 1rem;
     }
     
     .header .social-links a {
