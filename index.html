@@ -328,10 +328,10 @@
                     <h2>DoritosXCholula - Don’t waste a moment</h2>
                     <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
                     <p>Quanto è irritante perdere momenti di una partita o di un programma televisivo? Doritos Cholula è la patatina perfetta da portare al Super Bowl Party.</p>
-<p>Il concept della campagna mira a evidenziare quanto sia irritante perdere i momenti salienti di una partita, di uno show televisivo o di un film. Doritos Cholula risolve questo problema integrando direttamente la salsa messicana all'interno della patatina, eliminando la necessità di intingerla e distogliere lo sguardo dal televisore.</p>
-<p><br />
-<p>How irritating it is to miss moments of a game or a TV show?  Doritos Cholula is the perfect chip to bring to the Super Bowl Party.</p>
-<p>The campaign concept aims to highlight how irritating it is to miss moments of a game, a TV show or a movie. Doritos Cholula solves this problem by directly integrating Mexican sauce inside the chip, eliminating the need for dipping.</p>
+                    <p>Il concept della campagna mira a evidenziare quanto sia irritante perdere i momenti salienti di una partita, di uno show televisivo o di un film. Doritos Cholula risolve questo problema integrando direttamente la salsa messicana all'interno della patatina, eliminando la necessità di intingerla e distogliere lo sguardo dal televisore.</p>
+                    <p><br />
+                    <p>How irritating it is to miss moments of a game or a TV show?  Doritos Cholula is the perfect chip to bring to the Super Bowl Party.</p>
+                    <p>The campaign concept aims to highlight how irritating it is to miss moments of a game, a TV show or a movie. Doritos Cholula solves this problem by directly integrating Mexican sauce inside the chip, eliminating the need for dipping.</p>
                 `
             },
             'ADWEEK': {
@@ -404,6 +404,29 @@
                 modal.style.display = 'none';
             }
         }
+
+        // Aggiungi questo script per il posizionamento dinamico
+        document.querySelectorAll('.project-row').forEach(row => {
+            row.addEventListener('mouseover', function(e) {
+                const img = this.querySelector('.hover-image');
+                if(!img) return;
+                
+                const rect = this.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+                
+                // Posiziona a destra se c'è spazio, altrimenti a sinistra
+                if(viewportWidth - rect.right > img.offsetWidth + 50) {
+                    img.style.left = rect.right + 20 + 'px';
+                    img.style.right = 'auto';
+                } else {
+                    img.style.right = viewportWidth - rect.left + 20 + 'px';
+                    img.style.left = 'auto';
+                }
+                
+                // Centra verticalmente
+                img.style.top = rect.top + (rect.height/2) + 'px';
+            });
+        });
     </script>
 
     <meta name="description" content="Portfolio professionale di Luigi Mottola - Art Director & Graphic Designer">
