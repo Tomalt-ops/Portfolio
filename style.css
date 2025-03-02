@@ -201,17 +201,6 @@ body {
         gap: 1.5rem;
     }
 
-    .social-links {
-        bottom: 3vh;
-        right: 4vw;
-        gap: 1.2rem;
-    }
-    
-    .social-links a {
-        font-size: clamp(1.3rem, 5vw, 1.7rem);
-    }
-}
-
 .projects-table th:nth-child(2),
 .projects-table td:nth-child(2) {
     padding-left: 2rem; /* Spaziatura uniforme */
