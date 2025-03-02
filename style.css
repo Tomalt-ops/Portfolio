@@ -54,7 +54,7 @@ body {
     width: 100%;
 }
 
-.header .social-links a:first-child {
+.header .social-links a:"fab fa-instagram" {
     margin-right: 5rem; /* Aggiusta il valore a seconda dello spazio desiderato */
 }
 
