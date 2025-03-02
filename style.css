@@ -45,16 +45,20 @@ body {
 }
 
 .header .social-links {
-    justify-self: end;
-    gap: 1.5rem;
-    padding-right: 0;
+    display: flex;
+    gap: 2rem; /* Aumenta lo spazio tra le icone */
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 2rem;
 }
 
 .header .social-links a {
-    font-size: 1.3rem;
-    color: #000 !important;
-    transition: transform 0.3s ease;
+    font-size: 1.4rem;
+    position: relative;
 }
+
+.header .social-links a:not(:last-child) {
+    margin-right: 1rem;
 
 .header .social-links a:hover {
     transform: translateY(-2px);
@@ -136,7 +140,7 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Responsive Design */
+/* Responsive Mobile Design */
 @media (max-width: 768px) {
     #home h1 {
         font-size: 2rem;
@@ -170,9 +174,12 @@ body {
     }
 
     .header .social-links {
-        grid-area: social;
-        gap: 1rem;
-        justify-content: flex-end;
+        gap: 1.5rem;
+        padding-right: 1rem;
+    }
+    
+    .header .social-links a {
+        font-size: 1.2rem;
     }
 
     .projects-table {
