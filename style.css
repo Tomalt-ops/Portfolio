@@ -48,7 +48,7 @@ body {
 .header .social-links {
     display: flex;
     justify-content: flex-end;
-    gap: 3rem; /* Spaziatura */
+    gap: 20rem; /* Spaziatura */
     width: 100%;
     padding-right: 0;
     width: 100%;
