@@ -60,7 +60,8 @@ body {
 }
 
 .header .social-links a:not(:last-child) {
-    margin-right: 10rem;
+    margin-right: 0.1rem;
+}
 
 .header .social-links a:hover {
     transform: translateY(-6px);
@@ -176,6 +177,7 @@ body {
     }
 
     .header .social-links {
+        grid-area: social;
         gap: 2rem;
         padding-right: 0.5rem;
     }
