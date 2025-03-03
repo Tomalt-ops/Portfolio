@@ -509,6 +509,41 @@
                 modal.style.display = 'none';
             }
         }
+
+        /* # */
+        document.querySelectorAll('.project-row').forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                const hoverImg = this.querySelector('.hover-image');
+                if (!hoverImg) return;
+                
+                // Calcola le dimensioni e la posizione della riga nel viewport
+                const rowRect = this.getBoundingClientRect();
+                const imgHeight = hoverImg.offsetHeight;
+                
+                // Posizione ideale: centrata verticalmente rispetto alla riga
+                let idealTop = rowRect.top + rowRect.height / 2 - imgHeight / 2;
+                
+                // Imposta dei margini di sicurezza (ad es. 20px dal bordo superiore e inferiore)
+                const minTop = 20;
+                const maxTop = window.innerHeight - imgHeight - 20;
+                
+                // Regola la posizione in modo che l'immagine rimanga visibile
+                const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
+                
+                // Applica la posizione in modo fisso rispetto al viewport
+                hoverImg.style.position = 'fixed';
+                hoverImg.style.top = adjustedTop + 'px';
+                // Se il posizionamento orizzontale va bene, puoi lasciarlo invariato
+                hoverImg.style.display = 'block';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                const hoverImg = this.querySelector('.hover-image');
+                if (!hoverImg) return;
+                hoverImg.style.display = 'none';
+            });
+        });
+
     </script>
 
     <meta name="description" content="Portfolio professionale di Luigi Mottola - Art Director & Graphic Designer">
