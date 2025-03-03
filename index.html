@@ -115,97 +115,35 @@
             background: #f8f8f8;
         }
 
-        /* Hover image
-        .hover-image {
-            display: none;
-            position: absolute;
-            left: 90%;
-            top: 30%;
-            transform: translateY(-100%);
-            width: 300px;
-            z-index: 999;
-            pointer-events: none;
-        } */
-
-/*        .hover-image {
-            display: none;
-            position: fixed;
-            /* position: absolute; Relativo a .project-row */
- /*           max-width: 40vw;
-            max-height: 70vh;
-            pointer-events: none;
-            object-fit: contain;
-            z-index: 1001;
-            top: clamp(20px, 50%, calc(100% - 20px));
-            /* background: white;
-            padding: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 1px solid #eee; */
-            
-            /* Calcolo posizione dinamica */
-   /*         top: 50%;
-                /* clamp(
-                20px, 
-                calc(50vh - (min(400px, 60vh) / 2)), 
-                calc(100vh - 20px - min(400px, 60vh))
-            ); */
-   /*         left: 100%;
-                /* clamp(
-                20px, 
-                calc(100% - 20px),
-                calc(100vw - 20px - min(40vw, 500px))
-            ); */
-    /*        transform: translate(-100%, -50%);
-        }
-
-        .project-row:hover .hover-image {
-            display: block;
-            animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-        } 
-    */
-        
-        /* @keyframes image-appear {
-            from { opacity: 0; transform: translate(-80%, -50%); }
-            to { opacity: 1; transform: translate(-100%, -50%); }
-        } */
-        
-        /* Versione alternativa per righe nella parte bassa */
-        /*
-        .project-row:last-child .hover-image {
-            top: auto;
-            bottom: clamp(
-                20px, 
-                calc(50vh - (min(400px, 60vh) / 2)), 
-                calc(100vh - 20px - min(400px, 60vh))
-            );
-            transform: translate(-100%, 50%);
-        } */
-        
-        /*
-        .project-row:hover .hover-image {
-            display: block;
-        } */
-
         .project-cell {
             position: relative; /* Crea un contesto per il posizionamento assoluto */
         }
-
+/*
         .hover-image {
             display: none;
-            position: absolute; /* Ora posizionato relativamente a .project-cell */
+            position: absolute;
             max-width: 40vw;
             max-height: 50vh;
             z-index: 1001;
             pointer-events: none;
             object-fit: contain;
-            /* background: white;
-            padding: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 1px solid #eee; */
-            /* Posizionamento: allineata al centro verticale della cella e a destra */
             top: 50%;
             left: 100%;
             transform: translate(10%, -40%);
+        }
+*/
+        .hover-image {
+            display: none;
+            position: absolute; /* verrà sovrascritto dal JS in fixed */
+            max-width: 40vw;
+            max-height: 50vh;
+            z-index: 1001;
+            pointer-events: none;
+            object-fit: contain;
+            top: 50%;
+            left: 100%;
+            /* Rimuovi o commenta il transform se usi il JS per il posizionamento */
+            /* transform: translate(10%, -40%); */
         }
 
         .project-cell:hover .hover-image {
@@ -436,10 +374,10 @@
                     <h2>DoritosXCholula - Don’t waste a moment</h2>
                     <img src="IMG_20180712_155215.jpg" style="width: 100%; margin: 1rem 0;">
                     <p>Quanto è irritante perdere momenti di una partita o di un programma televisivo? Doritos Cholula è la patatina perfetta da portare al Super Bowl Party.</p>
-<p>Il concept della campagna mira a evidenziare quanto sia irritante perdere i momenti salienti di una partita, di uno show televisivo o di un film. Doritos Cholula risolve questo problema integrando direttamente la salsa messicana all'interno della patatina, eliminando la necessità di intingerla e distogliere lo sguardo dal televisore.</p>
-<p><br />
-<p>How irritating it is to miss moments of a game or a TV show?  Doritos Cholula is the perfect chip to bring to the Super Bowl Party.</p>
-<p>The campaign concept aims to highlight how irritating it is to miss moments of a game, a TV show or a movie. Doritos Cholula solves this problem by directly integrating Mexican sauce inside the chip, eliminating the need for dipping.</p>
+                    <p>Il concept della campagna mira a evidenziare quanto sia irritante perdere i momenti salienti di una partita, di uno show televisivo o di un film. Doritos Cholula risolve questo problema integrando direttamente la salsa messicana all'interno della patatina, eliminando la necessità di intingerla e distogliere lo sguardo dal televisore.</p>
+                    <p><br />
+                    <p>How irritating it is to miss moments of a game or a TV show?  Doritos Cholula is the perfect chip to bring to the Super Bowl Party.</p>
+                    <p>The campaign concept aims to highlight how irritating it is to miss moments of a game, a TV show or a movie. Doritos Cholula solves this problem by directly integrating Mexican sauce inside the chip, eliminating the need for dipping.</p>
                 `
             },
             'ADWEEK': {
@@ -519,24 +457,29 @@
                 const hoverImg = this.querySelector('.hover-image');
                 if (!hoverImg) return;
                 
-                // Calcola le dimensioni e la posizione della riga nel viewport
+                // Ottieni le dimensioni e la posizione della riga
                 const rowRect = this.getBoundingClientRect();
                 const imgHeight = hoverImg.offsetHeight;
+                const imgWidth = hoverImg.offsetWidth;
                 
-                // Posizione ideale: centrata verticalmente rispetto alla riga
+                // Calcola la posizione verticale ideale (centro della riga)
                 let idealTop = rowRect.top + rowRect.height / 2 - imgHeight / 2;
-                
-                // Imposta dei margini di sicurezza (ad es. 20px dal bordo superiore e inferiore)
                 const minTop = 20;
                 const maxTop = window.innerHeight - imgHeight - 20;
-                
-                // Regola la posizione in modo che l'immagine rimanga visibile
                 const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
                 
-                // Applica la posizione in modo fisso rispetto al viewport
+                // Calcola la posizione orizzontale ideale (al bordo destro della riga)
+                let idealLeft = rowRect.right;
+                
+                // Se l'immagine uscisse fuori dal viewport, la riposiziona
+                if (idealLeft + imgWidth > window.innerWidth - 20) {
+                    idealLeft = window.innerWidth - imgWidth - 20;
+                }
+                
+                // Applica le nuove impostazioni in modalità fixed
                 hoverImg.style.position = 'fixed';
                 hoverImg.style.top = adjustedTop + 'px';
-                // Se il posizionamento orizzontale va bene, puoi lasciarlo invariato
+                hoverImg.style.left = idealLeft + 'px';
                 hoverImg.style.display = 'block';
             });
             
