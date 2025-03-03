@@ -193,12 +193,17 @@ body {
 }
 
 /* hover image */
-/*.hover-image {
-    left: 100%;
+.hover-image {
+    display: none;
+    position: absolute; 
+    max-width: 40vw;
+    max-height: 50vh;
+    z-index: 1001;
+    pointer-events: none;
+    object-fit: contain;
     top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}*/
+    left: 100%;
+}
 
 /* Animazione modale */
 .project-modal {
