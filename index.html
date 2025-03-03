@@ -126,11 +126,11 @@
             pointer-events: none;
         } */
 
-        .hover-image {
+/*        .hover-image {
             display: none;
             position: fixed;
             /* position: absolute; Relativo a .project-row */
-            max-width: 40vw;
+ /*           max-width: 40vw;
             max-height: 70vh;
             pointer-events: none;
             object-fit: contain;
@@ -142,25 +142,26 @@
             border: 1px solid #eee; */
             
             /* Calcolo posizione dinamica */
-            top: 50%;
+   /*         top: 50%;
                 /* clamp(
                 20px, 
                 calc(50vh - (min(400px, 60vh) / 2)), 
                 calc(100vh - 20px - min(400px, 60vh))
             ); */
-            left: 100%;
+   /*         left: 100%;
                 /* clamp(
                 20px, 
                 calc(100% - 20px),
                 calc(100vw - 20px - min(40vw, 500px))
             ); */
-            transform: translate(-100%, -50%);
+    /*        transform: translate(-100%, -50%);
         }
 
         .project-row:hover .hover-image {
             display: block;
             animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+        } 
+    */
         
         /* @keyframes image-appear {
             from { opacity: 0; transform: translate(-80%, -50%); }
@@ -168,6 +169,7 @@
         } */
         
         /* Versione alternativa per righe nella parte bassa */
+        /*
         .project-row:last-child .hover-image {
             top: auto;
             bottom: clamp(
@@ -176,12 +178,39 @@
                 calc(100vh - 20px - min(400px, 60vh))
             );
             transform: translate(-100%, 50%);
-        }
+        } */
         
         /*
         .project-row:hover .hover-image {
             display: block;
         } */
+
+        .project-cell {
+            position: relative; /* Crea un contesto per il posizionamento assoluto */
+        }
+
+        .hover-image {
+            display: none;
+            position: absolute; /* Ora posizionato relativamente a .project-cell */
+            max-width: 40vw;
+            max-height: 70vh;
+            z-index: 1001;
+            pointer-events: none;
+            object-fit: contain;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid #eee;
+            /* Posizionamento: allineata al centro verticale della cella e a destra */
+            top: 50%;
+            left: 100%;
+            transform: translate(-100%, -50%);
+        }
+
+        .project-cell:hover .hover-image {
+            display: block;
+            animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
 
         /* Modal dettagli */
         .project-modal {
@@ -274,8 +303,11 @@
         </thead>
         <tbody>
             <tr class="project-row" onclick="openModal('Dettagli')">
-                <td> I dettagli amano nascondersi
-                    <img src="aff_1RGB.jpg" class="hover-image" alt="Anteprima progetto">
+                <td> 
+                    <div class="project-cell">
+                        I dettagli amano nascondersi
+                        <img src="aff_1RGB.jpg" class="hover-image" alt="Anteprima progetto">
+                    </div>
                 </td>
                 <td>advertising</td>
                 <td>&nbsp</td>
