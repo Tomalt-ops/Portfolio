@@ -76,6 +76,19 @@ body {
     text-decoration: none;
 }
 
+/* hover image */
+.hover-image {
+    display: none;
+    position: absolute; 
+    max-width: 40vw;
+    max-height: 50vh;
+    z-index: 1001;
+    pointer-events: none;
+    object-fit: contain;
+    top: 50%;
+    left: 100%;
+}
+
 .project-modal button {
     width: 30px !important;
     height: 30px !important;
@@ -190,19 +203,6 @@ body {
 .projects-table th:nth-child(2),
 .projects-table td:nth-child(2) {
     padding-left: 2rem; /* Spaziatura uniforme */
-}
-
-/* hover image */
-.hover-image {
-    display: none;
-    position: absolute; 
-    max-width: 40vw;
-    max-height: 50vh;
-    z-index: 1001;
-    pointer-events: none;
-    object-fit: contain;
-    top: 50%;
-    left: 100%;
 }
 
 /* Animazione modale */
