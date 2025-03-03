@@ -119,20 +119,6 @@
             position: relative; /* Crea un contesto per il posizionamento assoluto */
         }
 
-        .hover-image {
-            display: none;
-            position: absolute; /* verrà sovrascritto dal JS in fixed */
-            max-width: 40vw;
-            max-height: 50vh;
-            z-index: 1001;
-            pointer-events: none;
-            object-fit: contain;
-            top: 50%;
-            left: 100%;
-            /* Rimuovi o commenta il transform se usi il JS per il posizionamento */
-            /* transform: translate(10%, -40%); */
-        }
-
         .project-cell:hover .hover-image {
             display: block;
             animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
