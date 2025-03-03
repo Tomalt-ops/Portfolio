@@ -129,27 +129,31 @@
         .hover-image {
             display: none;
             position: fixed;
+            /* position: absolute; Relativo a .project-row */
             max-width: 40vw;
             max-height: 70vh;
             pointer-events: none;
             object-fit: contain;
-            z-index: 999;
+            z-index: 1001;
+            top: clamp(20px, 50%, calc(100% - 20px));
             /* background: white;
             padding: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             border: 1px solid #eee; */
             
             /* Calcolo posizione dinamica */
-            top: clamp(
+            top: 50%;
+                /* clamp(
                 20px, 
                 calc(50vh - (min(400px, 60vh) / 2)), 
                 calc(100vh - 20px - min(400px, 60vh))
-            );
-            left: clamp(
+            ); */
+            left: 100%;
+                /* clamp(
                 20px, 
                 calc(100% - 20px),
                 calc(100vw - 20px - min(40vw, 500px))
-            );
+            ); */
             transform: translate(-100%, -50%);
         }
 
