@@ -193,12 +193,12 @@ body {
 }
 
 /* hover image */
-.hover-image {
+/*.hover-image {
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+}*/
 
 /* Animazione modale */
 .project-modal {
