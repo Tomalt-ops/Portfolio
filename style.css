@@ -82,7 +82,7 @@ body {
     position: absolute; 
     max-width: 40vw;
     max-height: 50vh;
-    z-index: 1001;
+    z-index: 2000;
     pointer-events: none;
     object-fit: contain;
     top: 50%;
