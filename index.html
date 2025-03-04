@@ -326,13 +326,16 @@
     </table>
 
     <!-- Modal Dettagli -->
-    <div id="project-modal" class="project-modal">
-        <button onclick="closeModal()" style="float: right; margin-bottom: 1rem;">✕</button>
-        <div id="modal-content"></div>
+    <div id="project-modal" class="project-modal" style="display: none;">
+        <div class="modal-header">
+            <h2 id="modal-title"></h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div id="modal-content" class="modal-body"></div>
     </div>
 
     <!-- About Section -->
-    <div id="about-modal" class="project-modal">
+    <div id="about-modal" class="project-modal" style="display: none;">
         <button onclick="toggleAbout()" class="close-btn">✕</button>
         <div class="modal-content">
             <h2>About</h2>
@@ -347,18 +350,21 @@
         // Funzionalità About
         function toggleAbout() {
             const aboutModal = document.getElementById('about-modal');
-            aboutModal.style.display = aboutModal.style.display === 'block' ? 'none' : 'block';
+            if (getComputedStyle(aboutModal).display === 'none') {
+                aboutModal.style.display = 'block';
+            } else {
+                aboutModal.style.display = 'none';
+            }
         }
 
-        // Chiudi tutte le modali cliccando fuori
+        // Chiudi modal cliccando fuori
         window.onclick = function(event) {
-            const modals = document.querySelectorAll('.project-modal');
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
+            const modal = document.getElementById('project-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
         }
+        
         // Funzionalità Modal
         const projectData = {
             'Dettagli': /* ereditato da ('-----'): <tr class="project-row" onclick="openModal('-----')"> */ {
@@ -551,21 +557,13 @@
             const content = document.getElementById('modal-content');
             const modalTitle = document.getElementById('modal-title');
             
-            modalTitle.textContent = projectData[.Dettagli].title;
-            content.innerHTML = projectData[.Dettagli].content;
+            modalTitle.textContent = projectData[projectId].title;
+            content.innerHTML = projectData[projectId].content;
             modal.style.display = 'block';
         }
 
         function closeModal() {
             document.getElementById('project-modal').style.display = 'none';
-        }
-
-        // Chiudi modal cliccando fuori
-        window.onclick = function(event) {
-            const modal = document.getElementById('project-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
         }
 
         /* # */
