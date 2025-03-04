@@ -151,7 +151,6 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
-            overflow-y: auto;
         }
 
         .modal-header {
@@ -166,6 +165,7 @@
         }
 
         .modal-body {
+            overflow-y: auto;
             padding: 0rem 2rem 2rem 2rem;
             flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
         }
@@ -543,6 +543,8 @@
             content.innerHTML = projectData[projectId].content;
             
             modal.style.display = 'block';
+
+            // Attendi che il layout sia aggiornato e poi resetta lo scroll
             setTimeout(() => {
                 content.scrollTop = 0;      // Reset dello scroll dopo 0ms (cioè subito dopo il rendering)
             }, 50);
