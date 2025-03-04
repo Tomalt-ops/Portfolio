@@ -76,6 +76,20 @@ body {
     text-decoration: none;
 }
 
+/* hover image */
+.hover-image {
+    display: none;
+    position: absolute; 
+    max-width: 300px;
+    max-height: auto;
+    z-index: 2000;
+    pointer-events: none;
+    object-fit: contain;
+    top: 55%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
 .project-modal button {
     width: 30px !important;
     height: 30px !important;
