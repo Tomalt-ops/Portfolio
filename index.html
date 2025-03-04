@@ -549,7 +549,9 @@
             content.innerHTML = projectData[projectId].content;
             
             modal.style.display = 'block';
-            content.scrollTop = 0;
+            setTimeout(() => {
+                content.scrollTop = 0;      // Reset dello scroll dopo 0ms (cioè subito dopo il rendering)
+            }, 0);
         }
 
         function closeModal() {
