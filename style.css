@@ -89,18 +89,7 @@ body {
     left: 95%;
     transform: translate(-50%, -50%);
 }
-/*
-.project-modal button {
-    width: 30px !important;
-    height: 30px !important;
-    top: 50px !important;
-    right: 50px !important;
-    border: none solid #000 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*/
+
 .projects-table {
     margin-top: 140px; /* Aumenta spazio per header */
 }
