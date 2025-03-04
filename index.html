@@ -345,6 +345,9 @@
     <meta property="og:image" content="link-to-your-main-image.jpg">
     
     <script>
+
+        let currentProjectId = null;
+
         // Funzionalità About
         function toggleAbout() {
             const aboutModal = document.getElementById('about-modal');
@@ -554,6 +557,15 @@
             const modal = document.getElementById('project-modal');
             const content = document.getElementById('modal-content');
             const modalTitle = document.getElementById('modal-title');
+
+            // Se la modal è già aperta e si clicca lo stesso progetto, chiudila
+            if (modal.style.display === 'block' && currentProjectId === projectId) {
+                closeModal();
+                currentProjectId = null;
+                return;
+            }
+
+            currentProjectId = projectId;
             
             modalTitle.textContent = projectData[projectId].title;
             content.innerHTML = projectData[projectId].content;
@@ -568,6 +580,7 @@
 
         function closeModal() {
             document.getElementById('project-modal').style.display = 'none';
+            currentProjectId = null;
         }
 
         /* # */
