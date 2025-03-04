@@ -491,16 +491,24 @@
                 
                 // Calcola la posizione verticale ideale (centro della riga)
                 let idealTop = rowRect.top + rowRect.height / 2 - imgHeight / 2;
+                let idealLeft = rowRect.right; // Partiamo posizionando l'immagine a destra della riga
                 const minTop = 20;
                 const maxTop = window.innerHeight - imgHeight - 20;
                 const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
                 
-                // Calcola la posizione orizzontale ideale (al bordo destro della riga)
-                let idealLeft = rowRect.right;
+                // Imposta dei margini di sicurezza (ad es. 20px dal bordo)
+                const margin = 20;
+
+                // Regola la posizione verticale per far sì che l'immagine non esca in alto o in basso
+                if (idealTop < margin) {
+                    idealTop = margin;
+                } else if (idealTop + imgHeight > window.innerHeight - margin) {
+                    idealTop = window.innerHeight - imgHeight - margin;
+                }
                 
                 // Se l'immagine uscisse fuori dal viewport, la riposiziona
-                if (idealLeft + imgWidth > window.innerWidth - 20) {
-                    idealLeft = window.innerWidth - imgWidth - 20;
+                if (idealLeft + imgWidth > window.innerWidth - margin) {
+                    idealLeft = window.innerWidth - imgWidth - margin;
                 }
                 
                 // Applica le nuove impostazioni in modalità fixed
