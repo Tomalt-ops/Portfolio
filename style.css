@@ -89,7 +89,7 @@ body {
     left: 95%;
     transform: translate(-50%, -50%);
 }
-
+/*
 .project-modal button {
     width: 30px !important;
     height: 30px !important;
@@ -100,7 +100,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+*/
 .projects-table {
     margin-top: 140px; /* Aumenta spazio per header */
 }
@@ -180,7 +180,7 @@ body {
 }
 
 .close-btn {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     background: none;
