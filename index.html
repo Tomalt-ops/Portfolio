@@ -144,25 +144,24 @@
         
         /* Modal dettagli */
         .project-modal {
-            position: fixed;
+            display: none;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 50%;
             max-height: 80vh;
             background: white;
-            z-index: 2000;
             padding: 2rem;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             overflow-y: auto;
-            display: flex;
-            flex-direction: column;
+            z-index: 2000;
         }
-
+/*
         .modal-header {
-            position: sticky; /* L'header rimane fisso rispetto al contenitore */
+            position: sticky; 
             top: 0;
-            background: white; /* Assicura che l'header non sia trasparente */
+            background: white; 
             z-index: 10;
             padding: 1rem;
             border-bottom: 1px solid #eee;
@@ -174,9 +173,9 @@
         .modal-body {
             overflow-y: auto;
             padding: 1rem;
-            flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
+            flex-grow: 1;
         }
-
+*/
         /* About Section */
         #about-content {
             display: none;
@@ -328,10 +327,7 @@
     <!-- Modal Dettagli -->
     <div id="project-modal" class="project-modal">
         <button onclick="closeModal()" style="float: right; margin-bottom: 1rem;">✕</button>
-        <div class="modal-content">
-            <h2 class=.title></h2>
-            <p class=.content></p>
-        </div>
+        <div id="modal-content"></div>
     </div>
 
     <!-- About Section -->
@@ -552,10 +548,7 @@
         function openModal(projectId) {
             const modal = document.getElementById('project-modal');
             const content = document.getElementById('modal-content');
-            const modalTitle = document.getElementById('modal-title');
-            
-            modalTitle.textContent = projectData[.Dettagli].title;
-            content.innerHTML = projectData[.Dettagli].content;
+            content.innerHTML = projectData[projectId].content;
             modal.style.display = 'block';
         }
 
