@@ -144,18 +144,37 @@
         
         /* Modal dettagli */
         .project-modal {
-            display: none;
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 50%;
             max-height: 80vh;
             background: white;
+            z-index: 2000;
             padding: 2rem;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             overflow-y: auto;
-            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            position: sticky; /* L'header rimane fisso rispetto al contenitore */
+            top: 0;
+            background: white; /* Assicura che l'header non sia trasparente */
+            z-index: 10;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-body {
+            overflow-y: auto;
+            padding: 1rem;
+            flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
         }
 
         /* About Section */
@@ -513,6 +532,9 @@
         function openModal(projectId) {
             const modal = document.getElementById('project-modal');
             const content = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            
+            modalTitle.textContent = projectData[projectId].title;
             content.innerHTML = projectData[projectId].content;
             modal.style.display = 'block';
         }
