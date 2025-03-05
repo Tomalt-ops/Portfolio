@@ -40,29 +40,29 @@ body {
 
 .header .about {
     justify-content: left;
-            padding-left: 0rem;
-            cursor: pointer;
-        }
+    padding-left: 0rem;
+    cursor: pointer;
+}
         
-        .header .social-links {
-            text-align: right;
-            gap: 0.7rem;
-            justify-content: flex-end;
-            padding-right: 0rem;
-        }
+.header .social-links {
+    text-align: right;
+    gap: 0.7rem;
+    justify-content: flex-end;
+    padding-right: 0rem;
+}
 
-        /* Tabella progetti */
+/* Tabella progetti */
 
-        .projects-table {
-            table-layout: fixed;
-        }
+.projects-table {
+    table-layout: fixed;
+}
         
-        .projects-table th:nth-child(1),
-        .projects-table td:nth-child(1) {
-            width: 40%; /* da commentare se si vuole dividere in 3 parti uguali */
-            text-align: left;
-            padding-left: 2rem;
-        }
+.projects-table th:nth-child(1),
+.projects-table td:nth-child(1) {
+    width: 40%; /* da commentare se si vuole dividere in 3 parti uguali */
+    text-align: left;
+    padding-left: 2rem;
+}
         
         .projects-table th:nth-child(2),
         .projects-table td:nth-child(2) {
@@ -255,29 +255,6 @@ body {
     scroll-behavior: smooth; /* Scrolling fluido */
     scrollbar-color: #000 #fff;
     scrollbar-width: thin;
-}
-
-.header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Layout a 3 colonne */
-    align-items: center;
-    padding: 1.5rem 3rem;
-}
-
-.header .name {
-    justify-self: start;
-    padding-left: 0;
-}
-
-.header .about {
-    justify-self: center;
-    padding-left: 0;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.header .about:hover {
-    opacity: 0.7;
 }
 
 .header .social-links {
