@@ -172,6 +172,19 @@
             flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
         }
 
+        .img-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Due colonne di uguale larghezza */
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .img-row img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
         /* About Section */
         #about-content {
             display: none;
@@ -372,6 +385,12 @@
                     <p>Submerged by the frenzy and technology, are we still able to appreciate the hidden details that reveal otherwise invisible beauty?</p>
                     <p>The idea focuses on what we do not see and aims to "give us back our sight".</p>
                     <p>The advertising campagin uses three posters to stimulate the observation of passers-by, inviting them to consult an unusual catalog to train and dare to access an immersive experience.</p>
+
+                    <div class="img-row">
+                      <img src="aff_1RGB.jpg" alt="Anteprima 1">
+                      <img src="aff_2RGB.jpg" alt="Anteprima 2">
+                    </div>
+                    
                     <img src="aff_1RGB.jpg" style="width: 100%; margin: 1rem 0;">
                     <img src="aff_2RGB.jpg" style="width: 100%; margin: 1rem 0;">
                     <img src="aff_3RGB.jpg" style="width: 100%; margin: 1rem 0;">
