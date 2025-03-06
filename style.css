@@ -68,10 +68,11 @@ body {
     margin-top: 1rem; /* distanza tra header e titoli PROJECT TYPE */
     width: 100%;
     padding: 0rem 0.5rem 0rem 0.5rem;
-    font-family: 'NeueHaasDisplayMedium', sans-serif;
+    
 }
 
 .projects-table th {
+    font-family: 'NeueHaasDisplayMedium', sans-serif !important;
     letter-spacing: 0.05em;
     font-size: 0.9rem;
     padding-bottom: 1rem;
