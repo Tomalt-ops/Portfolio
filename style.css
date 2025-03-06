@@ -42,7 +42,7 @@ body {
 
 .header .about {
     justify-content: left;
-    padding-left: 6.2rem;
+    padding-left: 0rem;
     cursor: pointer;
 }
 
