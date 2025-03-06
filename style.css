@@ -341,13 +341,13 @@ body {
         grid-template-columns: 30% 50% 20% !important;
         grid-template-areas: 
             "name about social";
-        padding: 1rem 1rem 0rem 1rem !important;
+        padding: 0.5rem 0.5rem 0rem 0.5rem !important;
         z-index: 1000;
     }
 
     .header .name {
         grid-area: name;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .header .about {
@@ -363,7 +363,7 @@ body {
     }
     
     .header .social-links a {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .projects-table {
@@ -376,7 +376,17 @@ body {
         font-size: 0.9rem;
     }
 
+    .projects-table th:nth-child(2),
+    .projects-table td:nth-child(2) {
+        text-align: right;
+        padding-left: 0rem;
+    }
+
     .project-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100% !important;
         max-height: 80vh;
         padding: 0rem 0rem 2rem 0rem;
