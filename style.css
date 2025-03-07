@@ -6,7 +6,7 @@
     font-family: 'NeueHaasDisplayLight', sans-serif;
     font-weight: 700;
     font-style: normal;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 
 body {
