@@ -25,6 +25,7 @@ body {
     top: 0;
     background: white;
     z-index: 1000;
+    mix-blend-mode: difference;
 }
         
 .header div {
@@ -141,6 +142,9 @@ body {
     box-shadow: 0 0 0px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    /* Animazione modale */
+    /*animation: modalFade 0.3s ease;
+    z-index: 1001; /* Sopra l'header */
 }
     
 .project-modal button {
@@ -318,12 +322,22 @@ body {
 .projects-table td:nth-child(2) {
     padding-left: 2rem; /* Spaziatura uniforme */
 }
+    
+.video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        margin: 1rem 0;
+    }
 
-/* Animazione modale */
-.project-modal {
-    animation: modalFade 0.3s ease;
-    z-index: 1001; /* Sopra l'header */
-}
+.video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 
 @keyframes modalFade {
     from { opacity: 0; transform: translate(-50%, -55%); }
