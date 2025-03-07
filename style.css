@@ -129,7 +129,7 @@ body {
     transform: translate(-40%, -50%);
     width: 60%;
     height: auto; /* Permette al modal di espandersi in altezza */
-    max-height: 89vh; /* Aumenta da 80vh a 90vh (o altro valore) */
+    max-height: 80vh; /* Aumenta da 80vh a 90vh (o altro valore) */
     min-height: 60vh; /* Altezza minima garantita */
     background: white;
     z-index: 2000;
@@ -172,7 +172,7 @@ body {
 
 .modal-body {
     overflow-y: auto;
-    max-height: calc(89vh - 120px);
+    max-height: calc(80vh - 120px);
     padding: 0rem 2rem 2rem 2rem;
     flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
 }
