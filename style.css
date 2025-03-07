@@ -67,18 +67,6 @@ body {
     text-decoration: none;
 }
 
-/* .header-bottom-right {
-    position: fixed;
-    left: 5%;
-    bottom: 20px;
-    font-size: 3rem;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    z-index: 99;
-
-}
-*/
 .marquee-container {
    translate: 0vh 2vh;
     width: 100%;
@@ -114,6 +102,10 @@ body {
     padding: 0rem 0.5rem 0rem 0.5rem;
     
 }
+
+.thead {
+    padding: 0rem 0.5rem 0rem 0.5rem !important;
+    }
 
 .projects-table th {
     font-family: 'NeueHaasDisplayMedium', sans-serif !important;
