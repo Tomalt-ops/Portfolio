@@ -87,8 +87,6 @@ body {
     font-weight: bold;
 }
 
-
-
 @keyframes marquee {
     0% { left: -100%; }
     100% { left: 100%; }
@@ -103,15 +101,11 @@ body {
     
 }
 
-.table-header {
-    padding: 0rem 0.5rem 0rem 0.5rem !important;
-    }
-
 .projects-table th {
     font-family: 'NeueHaasDisplayMedium', sans-serif !important;
     letter-spacing: 0.05em;
     font-size: 0.9rem;
-    padding-bottom: 1rem;
+    padding-bottom: 5rem !important;
 }
 
 .projects-table th:nth-child(1),
