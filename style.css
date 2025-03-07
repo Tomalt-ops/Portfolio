@@ -133,7 +133,7 @@ body {
     min-height: 60vh; /* Altezza minima garantita */
     background: white;
     z-index: 2000;
-    padding: 2rem 0rem 2rem 0rem; /* Aggiungi padding superiore/inferiore */
+    padding: 0rem 0rem 0rem 0rem; /* Aggiungi padding superiore/inferiore */
     box-shadow: 0 0 0px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
