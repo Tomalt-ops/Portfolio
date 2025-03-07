@@ -23,7 +23,7 @@ body {
     padding: 0rem 0.5rem 0rem 0.5rem;
     position: fixed;
     top: 0;
-    background: white;
+    /* background: white; */
     z-index: 1000;
     mix-blend-mode: difference;
 }
@@ -93,6 +93,7 @@ body {
     width: 50%; /* da commentare se si vuole dividere in 3 parti uguali */
     text-align: left;
     padding-left: 0.6rem;
+    mix-blend-mode: difference;
 }
 
 .projects-table th:nth-child(3),
