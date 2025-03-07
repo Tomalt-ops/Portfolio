@@ -105,7 +105,7 @@ body {
     font-family: 'NeueHaasDisplayMedium', sans-serif !important;
     letter-spacing: 0.05em;
     font-size: 0.9rem;
-    padding-bottom: 5rem !important;
+    padding-bottom: 2rem !important;
 }
 
 .projects-table th:nth-child(1),
