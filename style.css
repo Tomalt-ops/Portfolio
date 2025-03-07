@@ -93,7 +93,7 @@ body {
 .projects-table td:nth-child(2) {
     width: 50%; /* da commentare se si vuole dividere in 3 parti uguali */
     text-align: left;
-    padding-left: 2.6rem;
+    padding-left: 2rem;
     mix-blend-mode: difference;
     color: white;
     z-index: 1950;
