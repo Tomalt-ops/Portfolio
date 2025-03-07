@@ -67,7 +67,7 @@ body {
     text-decoration: none;
 }
 
-.header-bottom-right {
+/* .header-bottom-right {
     position: fixed;
     left: 5%;
     bottom: 20px;
@@ -76,6 +76,30 @@ body {
     letter-spacing: 0.8px;
     text-transform: uppercase;
     z-index: 99;
+
+}
+*/
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: #f0f0f0; /* Sfondo opzionale */
+    padding: 10px 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    position: absolute;
+    animation: marquee 15s linear infinite;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 /* Tabella progetti */
