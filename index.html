@@ -163,6 +163,19 @@
                 aboutModal.style.display = 'none';
             }
         }
+
+        const includeVideo = false; // Imposta a true se vuoi includere il video
+        
+        const videoHTML = `
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/lb7cmtkBxtU?si=H9m9Y0qiXt0T43_3" 
+            title="Video ciao"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        `;
         
         // Funzionalità Modal
         const projectData = {
@@ -184,16 +197,7 @@
                       <img src="aff_2RGB.jpg" alt="Anteprima 2">
                     </div>
                     
-                    /*
-                    <div class="video-wrapper">
-                      <iframe src="https://www.youtube.com/embed/lb7cmtkBxtU?si=H9m9Y0qiXt0T43_3" 
-                        title="Video ciao"
-                        frameborder= "0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                      </iframe>
-                    </div> 
-                    */
+                    ${includeVideo ? videoHTML : ''}
                     
                     <img src="aff_3RGB.jpg" style="width: 100%; margin: 1rem 0;">
 
