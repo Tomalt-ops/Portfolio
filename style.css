@@ -38,12 +38,14 @@ body {
     text-align: left;
     justify-content: flex-start;
     padding-left: 0rem;
+    font-style: italic;
 }
 
 .header .about {
     justify-content: left;
     padding-left: 0rem;
     cursor: pointer;
+    font-style: italic;
 }
 
 .header .social-links {
@@ -104,8 +106,9 @@ body {
     text-align: left;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 2rem;
     position: relative;
+    font-family: 'NeueHaasDisplayMedium', sans-serif;
 }
 
 .project-row:hover {
