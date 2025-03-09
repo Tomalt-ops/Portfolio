@@ -272,8 +272,21 @@ body {
 /* About Section */
 .about-modal {
     display: none; /* Nascosto di default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 60%;
+    height: auto; /* Permette al modal di espandersi in altezza */
+    max-height: 100vh; /* Aumenta da 80vh a 90vh (o altro valore) */
+    min-height: 95vh; /* Altezza minima garantita */
+    background: white;
+    z-index: 2000;
+    padding: 0rem 0rem 0rem 0rem; /* Aggiungi padding superiore/inferiore */
+    box-shadow: 0 0 0px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
 }
-
 .about-modal h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
