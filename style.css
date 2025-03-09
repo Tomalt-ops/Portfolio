@@ -219,6 +219,41 @@ body {
     object-fit: cover;
 }
 
+/* Sezione Home hero */
+#home {
+    text-align: left;
+    padding: 8rem 2rem 4rem;
+    min-height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 600px;
+}
+
+/* Sezioni About/Portfolio */
+.section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #000;
+}
+
 /* Gallery Portfolio minimalista */
 .gallery {
     display: grid;
