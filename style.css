@@ -219,41 +219,6 @@ body {
     object-fit: cover;
 }
 
-/* Sezione Home hero */
-#home {
-    text-align: left;
-    padding: 8rem 2rem 4rem;
-    min-height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#home h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #000;
-}
-
-#home p {
-    font-size: 1.5rem;
-    color: #666;
-    max-width: 600px;
-}
-
-/* Sezioni About/Portfolio */
-.section {
-    padding: 6rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #000;
-}
-
 /* Gallery Portfolio minimalista */
 .gallery {
     display: grid;
@@ -286,46 +251,6 @@ body {
     box-shadow: 0 0 0px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-}
-.about-modal h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.about-modal .modal-content {
-    max-width: 600px;
-    padding: 40px;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-.about-content {
-    display: none;
-    padding: 6rem 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-    hyphens: auto; /* Divisione automatica delle parole */
-    max-width: 800px; /* Larghezza ottimale per la leggibilità */
-    line-height: 1.5; /* Interlinea */
-    text-justify: inter-word; /* Migliora la distribuzione degli spazi */
-    word-spacing: -0.1em; /* Compatta leggermente gli spazi tra le parole */
-}
-
-.about-content p {
-    margin-bottom: 1.5rem;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0px;
 }
 
 /* Video */
