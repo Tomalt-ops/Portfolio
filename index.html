@@ -578,6 +578,54 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
             });
         });
 
+        @media (max-width: 768px) {
+        document.querySelectorAll('.project-row').forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                const hoverImg = this.querySelector('.hover-image');
+                if (!hoverImg) return;
+                
+                // Ottieni le dimensioni e la posizione della riga
+                const rowRect = this.getBoundingClientRect();
+                const imgHeight = hoverImg.offsetHeight;
+                const imgWidth = hoverImg.offsetWidth;
+                
+                // Calcola la posizione verticale ideale (centro della riga)
+                let idealTop = rowRect.top + rowRect.height / 2 - imgHeight / 2;
+                let idealLeft = rowRect.right; // Partiamo posizionando l'immagine a destra della riga
+                const minTop = 2;
+                const maxTop = window.innerHeight - imgHeight - 0;
+                const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
+                
+                // Imposta dei margini di sicurezza (ad es. 20px dal bordo)
+                const margin = 0;
+
+                // Regola la posizione verticale per far sì che l'immagine non esca in alto o in basso
+                if (idealTop < margin) {
+                    idealTop = margin;
+                } else if (idealTop + imgHeight > window.innerHeight - margin) {
+                    idealTop = window.innerHeight - imgHeight - margin;
+                }
+                
+                // Se l'immagine uscisse fuori dal viewport, la riposiziona
+                if (idealLeft + imgWidth > window.innerWidth - margin) {
+                    idealLeft = window.innerWidth - imgWidth - margin;
+                }
+                
+                // Applica le nuove impostazioni in modalità fixed
+                hoverImg.style.position = 'fixed';
+                hoverImg.style.top = (adjustedTop + 5) - 'px';
+                hoverImg.style.left = (idealLeft - 100) - 'px';
+                hoverImg.style.display = 'block';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                const hoverImg = this.querySelector('.hover-image');
+                if (!hoverImg) return;
+                hoverImg.style.display = 'none';
+            });
+        });
+        }
+
         // Chiudi modal cliccando fuori
         window.onclick = function(event) {
             const modal = document.getElementById('project-modal');
