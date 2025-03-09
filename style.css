@@ -420,13 +420,3 @@ body {
         justify-content: center;
         gap: 1.5rem;
     }
-
-    #about-modal .modal-content {
-        padding: 5px;
-        font-size: 1rem;
-    }
-    
-    #about-modal h2 {
-        font-size: 1.8rem;
-    }
-}
