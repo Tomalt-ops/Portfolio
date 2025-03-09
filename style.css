@@ -116,6 +116,10 @@ body {
     font-family: 'NeueHaasDisplayMedium', sans-serif;
 }
 
+.projects-table tr:hover td {
+  border: none !important;
+}
+
 .project-row:hover {
     background: #f8f8f8;
 }
