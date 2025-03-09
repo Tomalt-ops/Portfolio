@@ -142,7 +142,7 @@
     <div id="about-modal" class="about-modal" style="display: none;">
         <div class="modal-header">
             <h2 id="modal-title">About</h2>
-            <button class="close-btn" onclick="closeModal()">✕</button>
+            <button onclick="toggleAbout()" class="close-btn">✕</button>
         </div>
         <div id="modal-content" class="modal-body">
             <p>Mario Rossi, graphic designer di fama internazionale, non ha dubbi: lui è il migliore al mondo. Con un portfolio che spazia da campagne pubblicitarie iconiche a loghi diventati simboli culturali, Mario si vanta di trasformare idee in capolavori visivi. "Non c'è sfida creativa che non possa affrontare," dice con un sorriso sicuro. "Ogni mio progetto è un passo avanti nel futuro del design, e il mondo lo sa." Con un ego grande quanto il suo talento, Mario Rossi non si accontenta di essere bravo: vuole essere ricordato come il designer che ha cambiato il gioco, per sempre.</p>
@@ -161,7 +161,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
     <script>
 
         let currentProjectId = null;
-/*
+
         // Funzionalità About
         function toggleAbout() {
             const aboutModal = document.getElementById('about-modal');
@@ -171,7 +171,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
                 aboutModal.style.display = 'none';
             }
         }
-*/
+
         const includeVideo = false; // Imposta a true se vuoi includere il video
         
         const videoHTML = `
