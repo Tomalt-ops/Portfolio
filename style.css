@@ -253,6 +253,25 @@ body {
     flex-direction: column;
 }
 
+.about-modal button {
+    color: #000000 !important;
+    background: none !important;
+    border: 0px !important;
+    border-radius: 0%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem !important;
+    position: sticky; /* L'header rimane fisso rispetto al contenitore */
+    top: 35px;
+    right: -600px;
+    transition: all 0.3s;
+    z-index: 2001;
+}
+
+.about-modal button:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+
 .close-btn {
     position: absolute;
     top: 20px;
