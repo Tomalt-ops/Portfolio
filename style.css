@@ -72,6 +72,8 @@ body {
     width: 100%;
     padding: 0rem 0.5rem 0rem 0.5rem;
     color: none;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .projects-table th {
@@ -85,6 +87,8 @@ body {
 .projects-table td:nth-child(1) {
     width: 50%; 
     text-align: left;
+    border: none !important;
+    outline: none;
 }
         
 .projects-table th:nth-child(2),
@@ -95,13 +99,16 @@ body {
     mix-blend-mode: difference;
     color: white;
     z-index: 1950;
-    
+    border: none !important;
+    outline: none;    
 }
 
 .projects-table th:nth-child(3),
 .projects-table td:nth-child(3) {
     width: 0%; 
     text-align: right;
+    border: none !important;
+    outline: none;
 }
 
 .projects-table th, 
@@ -116,6 +123,7 @@ body {
     font-family: 'NeueHaasDisplayMedium', sans-serif;
 }
 
+.projects-table tr:hover th,
 .projects-table tr:hover td {
   border: none !important;
 }
