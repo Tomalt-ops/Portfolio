@@ -68,12 +68,11 @@ body {
 /* Tabella progetti */
 .projects-table {
     table-layout: fixed;
-    margin-top: 1rem; /* distanza tra header e titoli PROJECT TYPE */
     width: 100%;
-    padding: 0rem 0.5rem 0rem 0.5rem;
     color: none;
     border-collapse: collapse;
-    border-spacing: 0;
+    border: none;
+    margin: 1rem 0.5rem 0rem 0.5rem;
 }
 
 .projects-table th {
@@ -87,8 +86,6 @@ body {
 .projects-table td:nth-child(1) {
     width: 50%; 
     text-align: left;
-    border: none !important;
-    outline: none;
 }
         
 .projects-table th:nth-child(2),
@@ -98,9 +95,7 @@ body {
     padding-left: 2rem;
     mix-blend-mode: difference;
     color: white;
-    z-index: 1950;
-    border: none !important;
-    outline: none;    
+    z-index: 1950;   
 }
 
 .projects-table th:nth-child(3),
@@ -123,11 +118,6 @@ body {
     font-family: 'NeueHaasDisplayMedium', sans-serif;
 }
 
-.projects-table tr:hover th,
-.projects-table tr:hover td {
-  border: none !important;
-}
-
 .project-row:hover {
     background: #f8f8f8;
 }
@@ -135,7 +125,6 @@ body {
 .project-cell {
     position: relative; /* Crea un contesto per il posizionamento assoluto */
 }
-
 
 /* Modal dettagli */
 .project-modal {
