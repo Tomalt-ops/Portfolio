@@ -531,7 +531,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
             currentProjectId = null;
         }
 
-        /* # */
+        /* riposizionamento immagini */
         document.querySelectorAll('.project-row').forEach(row => {
             row.addEventListener('mouseenter', function() {
                 const hoverImg = this.querySelector('.hover-image');
@@ -566,7 +566,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
                 
                 // Applica le nuove impostazioni in modalità fixed
                 hoverImg.style.position = 'fixed';
-                hoverImg.style.top = (adjustedTop + 5) - 'px';
+                hoverImg.style.top = (adjustedTop + 50) - 'px';
                 hoverImg.style.left = (idealLeft - 500) - 'px';
                 hoverImg.style.display = 'block';
             });
@@ -578,6 +578,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
             });
         });
 
+        /* MEDIA riposizionamento immagini */
         @media (max-width: 768px) {
         document.querySelectorAll('.project-row').forEach(row => {
             row.addEventListener('mouseenter', function() {
