@@ -550,7 +550,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
                 const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
                 
                 // Imposta dei margini di sicurezza (ad es. 20px dal bordo)
-                const margin = 400;
+                const margin = 20;
 
                 // Regola la posizione verticale per far sì che l'immagine non esca in alto o in basso
                 if (idealTop < margin) {
@@ -558,16 +558,16 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
                 } else if (idealTop + imgHeight > window.innerHeight - margin) {
                     idealTop = window.innerHeight - imgHeight - margin;
                 }
-                
+                /*
                 // Se l'immagine uscisse fuori dal viewport, la riposiziona
                 if (idealLeft + imgWidth > window.innerWidth - margin) {
                     idealLeft = window.innerWidth - imgWidth - margin;
                 }
-                
+                */
                 // Applica le nuove impostazioni in modalità fixed
                 hoverImg.style.position = 'fixed';
-                hoverImg.style.top = (adjustedTop + 20) + 'px';
-                hoverImg.style.left = (idealLeft - 500) - 'px';
+                hoverImg.style.top = (adjustedTop + 20) - 'px';
+                hoverImg.style.left = (idealLeft - 500) + 'px';
                 hoverImg.style.display = 'block';
             });
             
