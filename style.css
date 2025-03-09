@@ -338,7 +338,7 @@ body {
 
 /* Scritta in loop */
 .marquee-container {
-   translate: 0vh 2vh;
+    transform: translate(0vh, 2vh);
     width: 100%;
     height: 20rem;
     overflow: hidden;
