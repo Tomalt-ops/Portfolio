@@ -406,13 +406,13 @@ body {
     }
 
     .projects-table {
-        margin-top: 5rem !important;
+        margin-top: 2rem !important;
     }
 
     .projects-table th, 
     .projects-table td {
         padding: 0rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .projects-table th:nth-child(2),
@@ -424,8 +424,7 @@ body {
     .projects-table th, 
     .projects-table td,
     .projects-table div {
-        font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: 'NeueHaasDisplayMedium', sans-serif;
     }
 
