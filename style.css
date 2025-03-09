@@ -6,7 +6,6 @@
     font-family: 'NeueHaasDisplayLight', sans-serif;
     font-weight: 700;
     font-style: normal;
-    /* mix-blend-mode: difference; */
 }
 
 body {
@@ -23,7 +22,6 @@ body {
     padding: 0rem 0.5rem 0rem 0.5rem;
     position: fixed;
     top: 0;
-    /* background: white; */
     z-index: 1000;
     mix-blend-mode: difference;
     color: white;
@@ -67,38 +65,13 @@ body {
     text-decoration: none;
 }
 
-.marquee-container {
-   translate: 0vh 2vh;
-    width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    background: #ffffff; /* Sfondo opzionale */
-    padding: 112px 0;
-}
-
-.marquee-content {
-    display: inline-block;
-    position: absolute;
-    animation: marquee 10s linear infinite;
-    font-size: 7rem;
-    color: #000;
-    font-weight: bold;
-}
-
-@keyframes marquee {
-    0% { left: -200%; }
-    100% { left: 100%; }
-}
-
 /* Tabella progetti */
 .projects-table {
     table-layout: fixed;
     margin-top: 1rem; /* distanza tra header e titoli PROJECT TYPE */
     width: 100%;
     padding: 0rem 0.5rem 0rem 0.5rem;
-    
+    color: none;
 }
 
 .projects-table th {
@@ -110,13 +83,13 @@ body {
 
 .projects-table th:nth-child(1),
 .projects-table td:nth-child(1) {
-    width: 50%; /* da commentare se si vuole dividere in 3 parti uguali */
+    width: 50%; 
     text-align: left;
 }
         
 .projects-table th:nth-child(2),
 .projects-table td:nth-child(2) {
-    width: 50%; /* da commentare se si vuole dividere in 3 parti uguali */
+    width: 50%; 
     text-align: left;
     padding-left: 2rem;
     mix-blend-mode: difference;
@@ -127,7 +100,7 @@ body {
 
 .projects-table th:nth-child(3),
 .projects-table td:nth-child(3) {
-    width: 0%; /* da commentare se si vuole dividere in 3 parti uguali */
+    width: 0%; 
     text-align: right;
 }
 
@@ -150,12 +123,8 @@ body {
 .project-cell {
     position: relative; /* Crea un contesto per il posizionamento assoluto */
 }
-/*
-.project-cell:hover .hover-image {
-    display: block;
-    animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-*/
+
+
 /* Modal dettagli */
 .project-modal {
     position: fixed;
@@ -172,9 +141,6 @@ body {
     box-shadow: 0 0 0px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    /* Animazione modale */
-    /*animation: modalFade 0.3s ease;
-    z-index: 1001; /* Sopra l'header */
 }
     
 .project-modal button {
@@ -346,7 +312,8 @@ body {
     cursor: pointer;
     padding: 5px;
 }
-    
+
+/* Video */
 .video-wrapper {
         position: relative;
         width: 100%;
@@ -362,6 +329,32 @@ body {
         height: 100%;
         border: none;
     }
+
+/* Scritta in loop */
+.marquee-container {
+   translate: 0vh 2vh;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: #ffffff; /* Sfondo opzionale */
+    padding: 112px 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    position: absolute;
+    animation: marquee 10s linear infinite;
+    font-size: 7rem;
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% { left: -200%; }
+    100% { left: 100%; }
+}
 
 @keyframes modalFade {
     from { opacity: 0; transform: translate(-50%, -55%); }
