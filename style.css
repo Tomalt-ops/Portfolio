@@ -132,11 +132,11 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-40%, -50%);
+    transform: translate(-30%, -50%);
     width: 60%;
     height: auto; /* Permette al modal di espandersi in altezza */
     max-height: 100vh; /* Aumenta da 80vh a 90vh (o altro valore) */
-    min-height: 60vh; /* Altezza minima garantita */
+    min-height: 100vh; /* Altezza minima garantita */
     background: white;
     z-index: 2000;
     padding: 0rem 0rem 0rem 0rem; /* Aggiungi padding superiore/inferiore */
