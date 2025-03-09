@@ -545,7 +545,7 @@ I love to talk but I advertise. I love to talk but I advertise. I love to talk b
                 // Calcola la posizione verticale ideale (centro della riga)
                 let idealTop = rowRect.top + rowRect.height / 2 - imgHeight / 2;
                 let idealLeft = rowRect.right; // Partiamo posizionando l'immagine a destra della riga
-                const minTop = 20;
+                const minTop = 2;
                 const maxTop = window.innerHeight - imgHeight - 0;
                 const adjustedTop = Math.max(minTop, Math.min(idealTop, maxTop));
                 
