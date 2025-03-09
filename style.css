@@ -150,12 +150,12 @@ body {
 .project-cell {
     position: relative; /* Crea un contesto per il posizionamento assoluto */
 }
-
+/*
 .project-cell:hover .hover-image {
     display: block;
     animation: image-appear 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
+*/
 /* Modal dettagli */
 .project-modal {
     position: fixed;
