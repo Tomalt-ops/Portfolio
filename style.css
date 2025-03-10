@@ -286,7 +286,7 @@ body {
     transform: translate(-30%, -50%);
     width: 60%;
     height: auto; /* Permette al modal di espandersi in altezza */
-    max-height: 100vh; /* Aumenta da 80vh a 90vh (o altro valore) */
+    max-height: 95vh; /* Aumenta da 80vh a 90vh (o altro valore) */
     min-height: 95vh; /* Altezza minima garantita */
     background: white;
     z-index: 2000;
