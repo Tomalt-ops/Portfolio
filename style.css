@@ -214,7 +214,7 @@ body {
     margin: 0rem 0;
 }
 
-.img-row a {
+.img-row-a {
     display: grid;
     grid-template-columns: repeat(9, 1fr); /* Tre colonne di uguale larghezza */
     gap: 1rem;
