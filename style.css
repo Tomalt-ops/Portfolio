@@ -95,20 +95,12 @@ body {
         
 .projects-table th:nth-child(2),
 .projects-table td:nth-child(2) {
-    width: 45%; 
+    width: 50%;
     text-align: left;
     padding-left: 2rem;
     mix-blend-mode: difference;
     color: white;
     z-index: 1950;   
-}
-
-.projects-table th:nth-child(3),
-.projects-table td:nth-child(3) {
-    width: 5%; 
-    text-align: right;
-    border: none !important;
-    outline: none;
 }
 
 .projects-table th, 
