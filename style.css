@@ -182,6 +182,14 @@ body {
     padding: 0rem 2rem 2rem 2rem;
     flex-grow: 1; /* Occupa lo spazio rimanente e diventa scrollabile se il contenuto supera lo spazio */
 }
+
+.titles {
+    font-family: 'NeueHaasDisplayMedium', sans-serif; /* Sostituisci con il font che preferisci */
+    /* font-weight: bold; /* Se vuoi renderlo più evidente */
+    /* font-size: 1.2rem; /* Ingrandisci leggermente il testo */
+    /* color: #000000; /* Cambia colore se necessario */
+    /* text-transform: uppercase; /* Se vuoi le lettere maiuscole */
+}
     
 /* hover image */
 .hover-image {
