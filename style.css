@@ -185,8 +185,8 @@ body {
 
 .titles {
     font-family: 'NeueHaasDisplayMedium', sans-serif; /* Sostituisci con il font che preferisci */
+    font-size: 1.2rem; /* Ingrandisci leggermente il testo */
     /* font-weight: bold; /* Se vuoi renderlo più evidente */
-    /* font-size: 1.2rem; /* Ingrandisci leggermente il testo */
     /* color: #000000; /* Cambia colore se necessario */
     /* text-transform: uppercase; /* Se vuoi le lettere maiuscole */
 }
