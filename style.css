@@ -189,9 +189,6 @@ body {
 .titles {
     font-family: 'NeueHaasDisplayMedium', sans-serif; /* Sostituisci con il font che preferisci */
     font-size: 1.2rem; /* Ingrandisci leggermente il testo */
-    /* font-weight: bold; /* Se vuoi renderlo più evidente */
-    /* color: #000000; /* Cambia colore se necessario */
-    /* text-transform: uppercase; /* Se vuoi le lettere maiuscole */
 }
     
 /* hover image */
@@ -347,15 +344,10 @@ body {
 
 /* Responsive Mobile Design */
 @media (max-width: 768px) {
-    #home h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
+    
      div {
         font-weight: 700;
         font-size: 0.9rem;
-        padding: 0 1rem;
     }
 
     .header {
@@ -363,7 +355,6 @@ body {
         grid-template-areas: 
             "name about social";
         padding: 0.5rem 0.5rem 0rem 0.5rem !important;
-        z-index: 1000;
     }
 
     .header .name {
@@ -400,7 +391,7 @@ body {
     .projects-table th:nth-child(2),
     .projects-table td:nth-child(2) {
         text-align: right;
-        padding-left: 0rem;
+        padding-right: 0.5rem;
     }
 
     .projects-table th, 
@@ -416,7 +407,8 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100% !important;
-        max-height: 80vh;
+        min-height: 80vh !important;
+        max-height: 80vh !important;
         padding: 0rem 0rem 2rem 0rem;
     }
 
@@ -431,7 +423,8 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100% !important;
-        max-height: 80vh;
+        min-height: 80vh !important;
+        max-height: 80vh !important;
         padding: 0rem 0rem 2rem 0rem;
     }
 
@@ -439,3 +432,8 @@ body {
         top: 0px !important;
         right: -170px !important;
     }
+
+    .about-body {
+        max-height: calc(80vh - 10px);
+    }
+}
