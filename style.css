@@ -424,3 +424,18 @@ body {
         top: 0px !important;
         right: -170px !important;
     }
+
+    .about-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100% !important;
+        max-height: 80vh;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+
+    .about-modal button {
+        top: 0px !important;
+        right: -170px !important;
+    }
