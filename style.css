@@ -69,7 +69,7 @@ body {
 .projects-table {
     table-layout: fixed;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 1.45rem;
     color: none;
     border-collapse: collapse;
     border: none;
@@ -80,6 +80,10 @@ body {
     letter-spacing: 0.05em;
     font-size: 0.9rem;
     padding-bottom: 2rem !important;
+}
+
+.projects-table td {
+    padding: 0.9rem 0rem;
 }
 
 .projects-table th:nth-child(1),
@@ -110,7 +114,6 @@ body {
 .projects-table th, 
 .projects-table td,
 .projects-table div {
-    padding: 0.45rem 0rem;
     text-align: left;
     cursor: pointer;
     font-weight: 400;
