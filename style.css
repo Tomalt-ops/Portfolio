@@ -217,7 +217,7 @@ body {
 .img-row-a {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tre colonne di uguale larghezza */
-    width: 103%;
+    width: 100%;
     gap: 1rem;
     margin: 1rem 0;
 }
