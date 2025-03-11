@@ -455,7 +455,7 @@ body {
     /* Scritta in loop */
     .marquee-container {
         position: relative;
-        bottom: 2rem;
+        bottom: -5rem;
         padding: 0rem;
     }
 
