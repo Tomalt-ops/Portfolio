@@ -452,6 +452,7 @@ body {
     .marquee-container {
         position: absolute;
         bottom: 7rem;
+        padding: 0rem;
     }
 
     .marquee-content {
