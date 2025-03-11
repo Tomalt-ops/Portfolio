@@ -374,6 +374,10 @@ body {
         margin-top: 2rem !important;
     }
 
+    .projects-table th {
+        padding-bottom: 0.8rem !important;
+    }
+
     .projects-table th, 
     .projects-table td {
         padding: 0rem;
@@ -413,6 +417,16 @@ body {
         right: -170px !important;
     }
 
+    .modal-header {
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .modal-body {
+        max-height: calc(80vh - 2rem);
+        padding: 0rem 0.5rem 2rem 0.5rem;
+    }
+
     .about-modal {
         position: fixed;
         top: 50%;
@@ -431,5 +445,16 @@ body {
 
     .about-body {
         max-height: calc(80vh - 10px);
+        padding: 0rem 0.5rem 2rem 0.5rem;
+    }
+
+    /* Scritta in loop */
+    .marquee-container {
+        position: absolute;
+        bottom: 7rem;
+    }
+
+    .marquee-content {
+        font-size: 2.5rem;
     }
 }
