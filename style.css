@@ -393,6 +393,10 @@ body {
         font-family: 'NeueHaasDisplayMedium', sans-serif;
     }
 
+    .project-cell {
+        padding: 0.7rem 0rem 0.7rem 0rem;
+    }
+
     .project-modal {
         position: fixed;
         top: 50%;
