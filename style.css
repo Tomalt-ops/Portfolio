@@ -414,7 +414,7 @@ body {
 
     .project-modal button {
         top: 0px !important;
-        right: -170px !important;
+        right: -300px !important;
     }
 
     .modal-header {
@@ -440,7 +440,11 @@ body {
 
     .about-modal button {
         top: 0px !important;
-        right: -170px !important;
+        right: -300px !important;
+    }
+
+    .about-header {
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
     }
 
     .about-body {
