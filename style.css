@@ -200,8 +200,8 @@ body {
 .img-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Due colonne di uguale larghezza */
-    gap: 1rem;
-    margin: 0rem 0;
+    gap: 0.5rem;
+    padding: 0.25rem 0rem 0.25rem 0rem;
 }
 
 .img-row-a {
@@ -220,7 +220,7 @@ body {
 
 .horizontal-image {
     width: 100%;
-    margin: 1rem 0rem 0rem 0rem;
+    padding: 0.25rem 0rem 0.25rem 0rem;
 } 
 
 /* About Section */
