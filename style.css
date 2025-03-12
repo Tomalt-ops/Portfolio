@@ -197,25 +197,22 @@ body {
 }
 
 /* Per impostare le immagini affiancate */
-.img-row-2 {
+.img-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Due colonne di uguale larghezza */
     gap: 0.5rem;
-    padding: 0.25rem 0rem 0.25rem 0rem;
+    padding: 0.25rem 0rem;
+}
+
+.img-row-2 {
+    grid-template-columns: repeat(2, 1fr); /* Due colonne di uguale larghezza */
 }
 
 .img-row-3 {
-    display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tre colonne di uguale larghezza */
-    gap: 0.5rem;
-    padding: 0.25rem 0rem 0.25rem 0rem;
 }
 
 .img-row-4 {
-    display: grid;
     grid-template-columns: repeat(4, 1fr); /* Quattro colonne di uguale larghezza */
-    gap: 0.5rem;
-    padding: 0.25rem 0rem 0.25rem 0rem;
 }
         
 .img-row img {
