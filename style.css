@@ -57,6 +57,7 @@ body {
     width: 100%;
     padding-right: 0rem;
     width: 100%;
+    transform: translate(0rem, 0.1rem);
 }
 
 .header .social-links a {
@@ -368,6 +369,7 @@ body {
     .header .social-links {
         grid-area: social;
         gap: 0.7rem;
+        transform: translate(0rem, 0rem);
     }
     
     .header .social-links a {
