@@ -201,19 +201,21 @@ body {
 .img-row {
     display: grid;
     gap: 0.5rem;
-    padding: 0.25rem 0rem;
 }
 
 .img-row-2 {
     grid-template-columns: repeat(2, 1fr); /* Due colonne di uguale larghezza */
+    padding: 0.25rem 0rem;
 }
 
 .img-row-3 {
     grid-template-columns: repeat(3, 1fr); /* Tre colonne di uguale larghezza */
+    padding: 0.25rem 0rem;
 }
 
 .img-row-4 {
     grid-template-columns: repeat(4, 1fr); /* Quattro colonne di uguale larghezza */
+    padding: 0.25rem 0rem;
 }
         
 .img-row img {
