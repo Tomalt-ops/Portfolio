@@ -116,7 +116,7 @@ body {
 }
 
 .project-row:hover {
-    background: #f8f8f8;
+    background: #ffffffff;
 }
 
 .project-cell {
